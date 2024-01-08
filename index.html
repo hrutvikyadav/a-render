@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <link rel="stylesheet" type="text/css" href="/assets/asciinema-player.css" />
+    </head>
+    <body>
+
+        <h1>This is a Heading</h1>
+        <p>This is a paragraph.</p>
+
+        <div id="demo"> </div>
+        <script src="/assets/asciinema-player.min.js"></script>
+        <script>
+        AsciinemaPlayer.create('/assets/test_an_player.cast', document.getElementById('demo'), {
+            theme: "dracula",
+            poster: 'data:text/plain,My first embedding',
+            markers: [
+                [2, 'Intro'],
+                // [5, 'Foo'],
+                // [9, 'Bar'],
+                // [15, 'Baz'],
+                // [30, 'Qux'],
+            ],
+            terminalFontFamily: "'JetBrains Mono', Consolas, Menlo, 'Bitstream Vera Sans Mono', monospace"
+        });
+        </script>
+
+    </body>
+</html> 
