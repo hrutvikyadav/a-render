@@ -1,0 +1,21 @@
+@font-face {
+    font-family: "FiraCode Nerd Font";
+    src:    local(Fira Code Bold Nerd Font Complete Mono),
+            url("/a-render/fonts/Fira Code Bold Nerd Font Complete Mono.ttf") format("truetype");
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "FiraCode Nerd Font";
+    src:    local(Fira Code Regular Nerd Font Complete Mono),
+            url("/a-render/fonts/Fira Code Regular Nerd Font Complete Mono.ttf") format("truetype");
+    font-stretch: normal;
+}
+
+#demo2 {
+    background-color: #ff0000;
+    border: 4px solid #ff00ff
+    height: 100vh;
+}

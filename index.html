@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Page Title</title>
-        <link rel="stylesheet" type="text/css" href="/assets/asciinema-player.css" />
+        <link rel="stylesheet" type="text/css" href="/a-render/assets/asciinema-player.css" />
     </head>
     <body>
 
@@ -10,20 +10,40 @@
         <p>This is a paragraph.</p>
 
         <div id="demo"> </div>
-        <script src="/assets/asciinema-player.min.js"></script>
+        <script src="/a-render/assets/asciinema-player.min.js"></script>
         <script>
-        AsciinemaPlayer.create('/assets/test_an_player.cast', document.getElementById('demo'), {
-            theme: "dracula",
-            poster: 'data:text/plain,My first embedding',
-            markers: [
-                [2, 'Intro'],
-                // [5, 'Foo'],
-                // [9, 'Bar'],
-                // [15, 'Baz'],
-                // [30, 'Qux'],
-            ],
-            terminalFontFamily: "'JetBrains Mono', Consolas, Menlo, 'Bitstream Vera Sans Mono', monospace"
-        });
+        document.fonts.load("1em FiraCode Nerd Font").then(()=> {
+            AsciinemaPlayer.create('/a-render/assets/refactoring_example.cast', document.getElementById('demo'), {
+                theme: "dracula",
+                poster: 'data:text/plain,Refactoring EOLweb config page tables',
+                markers: [
+                    [1, 'Intro'],
+                    [31, 'Existing tables'],
+                    [100, 'Move first table to Teststable.tsx'],
+                    [166, 'Inspect errors in our new component'],
+                    [205, 'Declare props type for new component, add all the variables and functions \nthat went out of scope(all -Cannot find name xyz- errors) to new component props'],
+                    [249, 'Destructure those props to use in component'],
+                    [294, 'Add remaining missing symbols(look at errors) and their types(if known else lookup in old file later) to props'],
+                    [408, 'Lookup types for props in old file'],
+                    [1320, 'Add remaining out of scope symbols - missing components/types(also export as needed from typeutils.tsx)'],
+                    [2050, 'Fixing incorrect type definitions'],
+                    [2394, 'Use our extracted component in old file, replacing 500+ lines with <50'],
+                    [2460, 'Our work is done at this point, use code actions or autocomplete to fill up missings props for our new component'],
+                    [2640, 'Resolving unrelated errors with type definitions'],
+                    [3036, 'Done with errors'],
+                    [3040, 'Check if build is still working with npm run dev'],
+                    // [5, 'Foo'],
+                    // [9, 'Bar'],
+                    // [15, 'Baz'],
+                    // [30, 'Qux'],
+                ],
+                terminalFontFamily: "'FiraCode Nerd Font', monospace",
+                // terminalFontFamily: "'JetBrains Mono', Consolas, Menlo, 'Bitstream Vera Sans Mono', monospace",
+                speed: 2,
+                controls: true,
+                pauseOnMarkers: true,
+            });
+        })
         </script>
 
     </body>
