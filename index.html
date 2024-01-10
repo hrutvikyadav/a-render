@@ -3,6 +3,7 @@
     <head>
         <title>Page Title</title>
         <link rel="stylesheet" type="text/css" href="/a-render/assets/asciinema-player.css" />
+        <link rel="stylesheet" type="text/css" href="./assets/app.css" />
     </head>
     <body>
 
@@ -10,6 +11,7 @@
         <p>This is a paragraph.</p>
 
         <div id="demo"> </div>
+        <div id="demo2"> </div>
         <script src="/a-render/assets/asciinema-player.min.js"></script>
         <script>
         document.fonts.load("1em FiraCode Nerd Font").then(()=> {
@@ -42,6 +44,26 @@
                 speed: 2,
                 controls: true,
                 pauseOnMarkers: true,
+            });
+
+            AsciinemaPlayer.create('/a-render/assets/refactoring_example2.cast', document.getElementById('demo'), {
+                theme: "dracula",
+                poster: 'data:text/plain,Refactoring 2 EOLweb config page tabledata',
+                markers: [
+                    [1, 'Extracting table body to new file'],
+                    // [, 'Add missing fields'],
+                    [1325, 'Making the component generic'],
+                ],
+                terminalFontFamily: "'FiraCode Nerd Font', monospace",
+                // terminalFontSize: "small",
+                terminalFontSize: "13px",
+                // terminalFontFamily: "'JetBrains Mono', Consolas, Menlo, 'Bitstream Vera Sans Mono', monospace",
+                speed: 2,
+                controls: true,
+                pauseOnMarkers: true,
+                fit: false,
+                /* rows: 56,
+                cols: 240  */
             });
         })
         </script>
