@@ -12,6 +12,8 @@
 
         <div id="demo"> </div>
         <div id="demo2"> </div>
+        <div id="demo3"> </div>
+        <div id="demo4"> </div>
         <script src="/a-render/assets/asciinema-player.min.js"></script>
         <script>
         document.fonts.load("1em FiraCode Nerd Font").then(()=> {
@@ -46,7 +48,7 @@
                 pauseOnMarkers: true,
             });
 
-            AsciinemaPlayer.create('/a-render/assets/refactoring_example2.cast', document.getElementById('demo'), {
+            AsciinemaPlayer.create('/a-render/assets/refactoring_example2.cast', document.getElementById('demo2'), {
                 theme: "dracula",
                 poster: 'data:text/plain,Refactoring 2 EOLweb config page tabledata',
                 markers: [
@@ -64,6 +66,18 @@
                 fit: false,
                 /* rows: 56,
                 cols: 240  */
+            });
+
+            AsciinemaPlayer.create('/a-render/assets/rustnighlyinstall.cast', document.getElementById('demo4'), {
+                theme: "dracula",
+                poster: 'data:text/plain,Install rust nightly for arduino dev',
+                /* markers: [
+
+                ], */
+                terminalFontFamily: "'FiraCode Nerd Font', monospace",
+                speed: 2,
+                controls: true,
+                pauseOnMarkers: false,
             });
         })
         </script>
