@@ -14,6 +14,10 @@
         <div id="demo2"> </div>
         <div id="demo3"> </div>
         <div id="demo4"> </div>
+        <div id="demo5"> </div>
+        <div id="demo6"> </div>
+        <div id="demo7"> </div>
+        <div id="demo8"> </div>
         <script src="/a-render/assets/asciinema-player.min.js"></script>
         <script>
         document.fonts.load("1em FiraCode Nerd Font").then(()=> {
@@ -71,6 +75,54 @@
             AsciinemaPlayer.create('/a-render/assets/rustnighlyinstall.cast', document.getElementById('demo4'), {
                 theme: "dracula",
                 poster: 'data:text/plain,Install rust nightly for arduino dev',
+                /* markers: [
+
+                ], */
+                terminalFontFamily: "'FiraCode Nerd Font', monospace",
+                speed: 2,
+                controls: true,
+                pauseOnMarkers: false,
+            });
+
+            AsciinemaPlayer.create('/a-render/assets/shadcn.cast', document.getElementById('demo5'), {
+                theme: "dracula",
+                poster: 'data:text/plain,Shadcn setup with vite',
+                /* markers: [
+
+                ], */
+                terminalFontFamily: "'FiraCode Nerd Font', monospace",
+                speed: 2,
+                controls: true,
+                pauseOnMarkers: false,
+            });
+
+            AsciinemaPlayer.create('/a-render/assets/postgres.cast', document.getElementById('demo6'), {
+                theme: "dracula",
+                poster: 'data:text/plain,Postgres install with new user',
+                /* markers: [
+
+                ], */
+                terminalFontFamily: "'FiraCode Nerd Font', monospace",
+                speed: 2,
+                controls: true,
+                pauseOnMarkers: false,
+            });
+
+            AsciinemaPlayer.create('/a-render/assets/postgres-post-install.cast', document.getElementById('demo7'), {
+                theme: "dracula",
+                poster: 'data:text/plain,Postgres Post Install Setup',
+                /* markers: [
+
+                ], */
+                terminalFontFamily: "'FiraCode Nerd Font', monospace",
+                speed: 2,
+                controls: true,
+                pauseOnMarkers: false,
+            });
+
+            AsciinemaPlayer.create('/a-render/assets/nginx-sample-site.cast', document.getElementById('demo8'), {
+                theme: "dracula",
+                poster: 'data:text/plain,Setup simple site with nginx',
                 /* markers: [
 
                 ], */
