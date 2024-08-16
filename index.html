@@ -18,6 +18,8 @@
         <div id="demo6"> </div>
         <div id="demo7"> </div>
         <div id="demo8"> </div>
+        <div id="demo9"> </div>
+        <div id="demo10"> </div>
         <script src="/a-render/assets/asciinema-player.min.js"></script>
         <script>
         document.fonts.load("1em FiraCode Nerd Font").then(()=> {
@@ -131,6 +133,31 @@
                 controls: true,
                 pauseOnMarkers: false,
             });
+
+            AsciinemaPlayer.create('/a-render/assets/docker-install.cast', document.getElementById('demo9'), {
+                theme: "dracula",
+                poster: 'data:text/plain,Install docker without docker desktop',
+                /* markers: [
+
+                ], */
+                terminalFontFamily: "'FiraCode Nerd Font', monospace",
+                speed: 2,
+                controls: true,
+                pauseOnMarkers: false,
+            });
+
+            AsciinemaPlayer.create('/a-render/assets/devpod-install.cast', document.getElementById('demo10'), {
+                theme: "dracula",
+                poster: 'data:text/plain,Devcontainers(devpod) setup with neovim',
+                /* markers: [
+
+                ], */
+                terminalFontFamily: "'FiraCode Nerd Font', monospace",
+                speed: 2,
+                controls: true,
+                pauseOnMarkers: false,
+            });
+
         })
         </script>
 
