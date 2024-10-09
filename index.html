@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Page Title</title>
-        <link rel="stylesheet" type="text/css" href="/a-render/assets/asciinema-player.css" />
+        <link rel="stylesheet" type="text/css" href="./assets/asciinema-player.css" />
         <link rel="stylesheet" type="text/css" href="./assets/app.css" />
     </head>
     <body>
@@ -20,10 +20,11 @@
         <div id="demo8"> </div>
         <div id="demo9"> </div>
         <div id="demo10"> </div>
-        <script src="/a-render/assets/asciinema-player.min.js"></script>
+        <div id="demo11"> </div>
+        <script src="./assets/asciinema-player.min.js"></script>
         <script>
         document.fonts.load("1em FiraCode Nerd Font").then(()=> {
-            AsciinemaPlayer.create('/a-render/assets/refactoring_example.cast', document.getElementById('demo'), {
+            AsciinemaPlayer.create('./assets/refactoring_example.cast', document.getElementById('demo'), {
                 theme: "dracula",
                 poster: 'data:text/plain,Refactoring EOLweb config page tables',
                 markers: [
@@ -54,7 +55,7 @@
                 pauseOnMarkers: true,
             });
 
-            AsciinemaPlayer.create('/a-render/assets/refactoring_example2.cast', document.getElementById('demo2'), {
+            AsciinemaPlayer.create('./assets/refactoring_example2.cast', document.getElementById('demo2'), {
                 theme: "dracula",
                 poster: 'data:text/plain,Refactoring 2 EOLweb config page tabledata',
                 markers: [
@@ -74,7 +75,7 @@
                 cols: 240  */
             });
 
-            AsciinemaPlayer.create('/a-render/assets/rustnighlyinstall.cast', document.getElementById('demo4'), {
+            AsciinemaPlayer.create('./assets/rustnighlyinstall.cast', document.getElementById('demo4'), {
                 theme: "dracula",
                 poster: 'data:text/plain,Install rust nightly for arduino dev',
                 /* markers: [
@@ -86,7 +87,7 @@
                 pauseOnMarkers: false,
             });
 
-            AsciinemaPlayer.create('/a-render/assets/shadcn.cast', document.getElementById('demo5'), {
+            AsciinemaPlayer.create('./assets/shadcn.cast', document.getElementById('demo5'), {
                 theme: "dracula",
                 poster: 'data:text/plain,Shadcn setup with vite',
                 /* markers: [
@@ -98,7 +99,7 @@
                 pauseOnMarkers: false,
             });
 
-            AsciinemaPlayer.create('/a-render/assets/postgres.cast', document.getElementById('demo6'), {
+            AsciinemaPlayer.create('./assets/postgres.cast', document.getElementById('demo6'), {
                 theme: "dracula",
                 poster: 'data:text/plain,Postgres install with new user',
                 /* markers: [
@@ -110,7 +111,7 @@
                 pauseOnMarkers: false,
             });
 
-            AsciinemaPlayer.create('/a-render/assets/postgres-post-install.cast', document.getElementById('demo7'), {
+            AsciinemaPlayer.create('./assets/postgres-post-install.cast', document.getElementById('demo7'), {
                 theme: "dracula",
                 poster: 'data:text/plain,Postgres Post Install Setup',
                 /* markers: [
@@ -122,7 +123,7 @@
                 pauseOnMarkers: false,
             });
 
-            AsciinemaPlayer.create('/a-render/assets/nginx-sample-site.cast', document.getElementById('demo8'), {
+            AsciinemaPlayer.create('./assets/nginx-sample-site.cast', document.getElementById('demo8'), {
                 theme: "dracula",
                 poster: 'data:text/plain,Setup simple site with nginx',
                 /* markers: [
@@ -134,7 +135,7 @@
                 pauseOnMarkers: false,
             });
 
-            AsciinemaPlayer.create('/a-render/assets/docker-install.cast', document.getElementById('demo9'), {
+            AsciinemaPlayer.create('./assets/docker-install.cast', document.getElementById('demo9'), {
                 theme: "dracula",
                 poster: 'data:text/plain,Install docker without docker desktop',
                 /* markers: [
@@ -146,7 +147,7 @@
                 pauseOnMarkers: false,
             });
 
-            AsciinemaPlayer.create('/a-render/assets/devpod-install.cast', document.getElementById('demo10'), {
+            AsciinemaPlayer.create('./assets/devpod-install.cast', document.getElementById('demo10'), {
                 theme: "dracula",
                 poster: 'data:text/plain,Devcontainers(devpod) setup with neovim',
                 /* markers: [
@@ -158,6 +159,17 @@
                 pauseOnMarkers: false,
             });
 
+            AsciinemaPlayer.create('./assets/rabbit-workers.cast', document.getElementById('demo11'), {
+                theme: "dracula",
+                poster: 'data:text/plain,RabbitMQ workers',
+                /* markers: [
+
+                ], */
+                terminalFontFamily: "'FiraCode Nerd Font', monospace",
+                speed: 2,
+                controls: true,
+                pauseOnMarkers: false,
+            });
         })
         </script>
 
