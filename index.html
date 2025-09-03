@@ -20,6 +20,13 @@
         <div id="demo8"> </div>
         <div id="demo9"> </div>
         <div id="demo10"> </div>
+        <div id="demo11"> </div>
+        <div id="demo12"> </div>
+        <div id="demo13"> </div>
+        <div id="demo14"> </div>
+        <div id="demo15"> </div>
+        <div id="demo16"> </div>
+        <div id="demo17"> </div>
         <script src="/a-render/assets/asciinema-player.min.js"></script>
         <script>
         document.fonts.load("1em FiraCode Nerd Font").then(()=> {
@@ -158,6 +165,67 @@
                 pauseOnMarkers: false,
             });
 
+            AsciinemaPlayer.create('/a-render/assets/das_on_linux.cast', document.getElementById('demo13'), {
+                theme: "dracula",
+                poster: 'data:text/plain,Build DAS from source on linux',
+                /* markers: [
+
+                ], */
+                terminalFontFamily: "'FiraCode Nerd Font', monospace",
+                speed: 1,
+                controls: true,
+                pauseOnMarkers: false,
+            });
+
+
+            AsciinemaPlayer.create('/a-render/assets/postgres-downgrade.cast', document.getElementById('demo14'), {
+                theme: "dracula",
+                poster: 'data:text/plain,Pin postgres version for DAS',
+                /* markers: [
+
+                ], */
+                terminalFontFamily: "'FiraCode Nerd Font', monospace",
+                speed: 1,
+                controls: true,
+                pauseOnMarkers: false,
+            });
+
+
+            AsciinemaPlayer.create('/a-render/assets/das_on_linux2.cast', document.getElementById('demo15'), {
+                theme: "dracula",
+                poster: 'data:text/plain,Build DAS from source on linux continued',
+                /* markers: [
+
+                ], */
+                terminalFontFamily: "'FiraCode Nerd Font', monospace",
+                speed: 1,
+                controls: true,
+                pauseOnMarkers: false,
+            });
+
+            AsciinemaPlayer.create('/a-render/assets/http-playground.cast', document.getElementById('demo16'), {
+                theme: "dracula",
+                poster: 'data:text/plain,http Playground',
+                /* markers: [
+
+                ], */
+                terminalFontFamily: "'FiraCode Nerd Font', monospace",
+                speed: 2,
+                controls: true,
+                pauseOnMarkers: false,
+            });
+
+            AsciinemaPlayer.create('/a-render/assets/can-playground.cast', document.getElementById('demo17'), {
+                theme: "dracula",
+                poster: 'data:text/plain,CAN Playground',
+                /* markers: [
+
+                ], */
+                terminalFontFamily: "'FiraCode Nerd Font', monospace",
+                speed: 2,
+                controls: true,
+                pauseOnMarkers: false,
+            });
         })
         </script>
 
